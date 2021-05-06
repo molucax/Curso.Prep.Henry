@@ -64,10 +64,7 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if(usuario.email) {
-    return true;
-  }
-  return false;
+  return usuario.email ? true : false;
 }
 
 
@@ -76,7 +73,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(objeto.[propiedad]) {
+  if(objeto[propiedad]) {
     return true;
   }
   return false;
@@ -103,7 +100,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  usuario.amigos.push(nuevoAmigo);
+  usuario.amigos = [...usuario.amigos, nuevoAmigo];
   return usuario;
 }
 
